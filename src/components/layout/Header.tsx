@@ -17,12 +17,13 @@ export default function Header() {
 
   // Navigation items
   const navItems = [
-    { name: 'Início', href: '#home' },
-    { name: 'Sobre', href: '#about' },
-    { name: 'Eventos', href: '#events' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Comunidade', href: '#community' },
-    { name: 'Contato', href: '#contact' }
+    { name: 'Início', href: '/#home' },
+    { name: 'Sobre', href: '/#about' },
+    { name: 'Eventos', href: '/#events' },
+    { name: 'Blog', href: '/#blog' },
+    { name: 'Comunidade', href: '/#community' },
+    { name: 'Contato', href: '/#contact' },
+    { name: 'Formulário', href: '/form' }
   ];
 
   return (
