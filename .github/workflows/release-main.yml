@@ -11,6 +11,12 @@ jobs:
     name: Production checks
     runs-on: ubuntu-latest
     steps:
+      - name: Block direct pushes to main
+        if: github.event_name == 'push'
+        run: |
+          echo "Direct pushes to main are blocked. Open a PR from development instead."
+          exit 1
+
       - name: Enforce development source
         if: github.event_name == 'pull_request'
         run: |

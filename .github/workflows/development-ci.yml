@@ -12,6 +12,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enforce branches are based on development
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch origin development
+          if ! git merge-base --is-ancestor origin/development HEAD; then
+            echo "Feature branches must be based on the development branch."
+            exit 1
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
