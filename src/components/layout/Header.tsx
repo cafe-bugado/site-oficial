@@ -20,6 +20,7 @@ export default function Header() {
     { name: 'Início', href: '/#home' },
     { name: 'Sobre', href: '/#about' },
     { name: 'Eventos', href: '/#events' },
+    { name: 'Desafios', href: '/desafios' },
     { name: 'Blog', href: '/#blog' },
     { name: 'Comunidade', href: '/#community' },
     { name: 'Contato', href: '/#contact' },
